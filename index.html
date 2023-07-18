@@ -3,18 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/starter.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <title>ReadMe</title>
 </head>
 <body>
-    <header>
-        <h1>This is the header</h1>
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container ml-0" >
+            <div class="row" >
+                <div class="col-3 col-sm-3 col-md-2  align-self-center" style="margin-right: 0;">
+                    <img id="logo-image" src="img/logo.png" class="img-fluid">
+                </div>
+                <div id="logo-text" class="col-9 col-sm-9 col-md-9 align-self-center">
+                    <h1>ReadMe </h1>
+                    <h2>Books For All</h1>
+                </div>
+                
+            </div>
+        </div>
     </header>
-    <div>
-        <h1>This is the content section</h1>
+    <div id="side-bar" class="d-flex flex-column flex-shrink-0" style="width: 100px;">
+        <div >
+            <h1>This is the long column</h1>
+        </div>
     </div>
-    <footer>
-        <h1>This is the footer</h1>
+    <div class="container col-11">
+        <div class="col-11">
+        <h1>This is the content section</h1>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>This is the footer</h1>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     
 </body>
 </html>

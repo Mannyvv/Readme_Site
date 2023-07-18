@@ -1,0 +1,33 @@
+.jumbotron{
+    margin: 0;
+    padding: 0px;
+    background-color: #05e8ba;
+    background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
+}
+
+
+#logo-text{
+    margin-top: 20px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#logo-text h1{
+    font-family: caveat, cursive;
+    font-size-adjust: inherit;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#logo-text h2{
+    font-size-adjust: inherit;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+#logo-image{
+    height:fit-content;
+    margin-right: 0;
+    padding-right: 0;
+}
