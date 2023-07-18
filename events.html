@@ -35,24 +35,22 @@
         </div>
     </header>
     <!-- Navigation Bar -->
-      <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="aboutus.html">About</a>
-            <a class="nav-item nav-link" href="events.html">Events</a>
+            <a class="nav-item nav-link " href="index.html">Home </a>
+            <a class="nav-item nav-link " href="aboutus.html">About</a>
+            <a class="nav-item nav-link active" href="#">Events<span class="sr-only">(current)</span></a>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     News Letter
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" href="#">Sign-Up</a>
-                    <a id="newsMonth" class="dropdown-item" href="#">Current Month News Letter</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Past News Letters</a>
+                    <a class="dropdown-item" href="#">Sign-Up</a>
+                    <a class="dropdown-item" href="#">This Month's News</a>
                 </div>
             </li>
             <a class="nav-item nav-link" href="#">Contact Us</a>
@@ -60,61 +58,26 @@
         </div>
       </nav>
 
-      <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button> -->
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">News Letter Sign Up Form</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <h1>Sign Up Form Goes Here</h1>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
 
     <!-- Page Content -->
-    <h1 id="h11">This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
-    <h1>This is the Home Page</h1>
+    <div class="container">
+      <div class="row row-content">
+        <div class="col-sm-12">
+          <h1 style="margin-left: 150px;">Events</h1>
+        </div>
+        <div class="col-sm-12">
+          <iframe  src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%237986CB&ctz=America%2FLos_Angeles&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&src=NjZmMDk0MGNiYjlhYWE3ZjhkN2RlNWFiN2YyODMxNjhhNmZiZDExOTYzYWRiODkxMzA5MDQ0NWRiMGEyNGJhYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
 
-
+    </div>
     </footer>
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/starter.js"></script>
     
 </body>
 </html>

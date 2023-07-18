@@ -19,10 +19,21 @@
     padding-bottom: 0;
 }
 
+.container h1{
+    font-family: caveat, cursive;
+    font-size-adjust: inherit;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 50px;
+    
+    
+}
+
 #logo-text h2{
     font-size-adjust: inherit;
     margin-top: 0;
     padding-top: 0;
+    
 }
 
 
@@ -31,3 +42,28 @@
     margin-right: 0;
     padding-right: 0;
 }
+
+.navbar-custom {
+    background-color: #05e8ba;
+    background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
+    border-bottom: 3px;
+    border-color: black;
+    border-bottom-style: solid;
+    color: black;
+}
+
+.row-content{
+    border-bottom: black;
+    border-bottom-style: ridge;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-width: 1px;
+
+
+}
+
+iframe{
+    display: block;
+    margin: auto;
+}
+
