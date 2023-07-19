@@ -1,8 +1,9 @@
-.jumbotron{
+.jumbotron, .site-footer{
     margin: 0;
     padding: 0px;
     background-color: #05e8ba;
     background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
+
 }
 
 
@@ -67,3 +68,10 @@ iframe{
     margin: auto;
 }
 
+.btn-link{
+    color: white;
+}
+
+.site-footer{
+    margin-top: 20px;
+}
