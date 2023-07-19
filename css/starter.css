@@ -75,3 +75,9 @@ iframe{
 .site-footer{
     margin-top: 20px;
 }
+
+.card{
+    margin: 5px;
+    padding: 5px;
+    margin: 10 5 10 5;
+}
