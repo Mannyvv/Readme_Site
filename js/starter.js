@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
   let $window = $(window);
 
@@ -35,4 +37,27 @@ $(document).ready(function () {
     "December",
   ];
   $("#newsMonth").text(`${month[monthNumber]} News Letter`);
+
+
+  // Sign-Up Form
+  let signUpBtn = document.querySelector("#nlSignUpBtn");
+  signUpBtn.addEventListener("click", function () {
+    let nlName = document.querySelector("#nlName");
+    if (nlEmail.value){
+      let fullName = nlName.value;
+      let nlThankYou = document.querySelector("#nlThankYou");
+      nlThankYou.textContent = `Thank you ${fullName}!`;
+      $("#nlSignUpModal").modal('hide')
+      $("#nlErrorText").hide()
+      
+      $("#nlThankYouModal").modal('show');
+  } else{
+    $("#nlErrorText").show()
+  }
+
+
+  })
+
+
 });
+

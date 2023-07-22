@@ -35,28 +35,97 @@
         </div>
     </header>
     <!-- Navigation Bar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link " href="index.html">Home </a>
+          <a class="nav-item nav-link active" href="aboutus.html">About<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="events.html">Events</a>
+          <!-- News Letter Dropdown -->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  News Letter
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" data-toggle="modal" data-target="#nlSignUpModal" href="#">Sign-Up</a>
+                  <a id="newsMonth" class="dropdown-item" href="#">Current Month News Letter</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Past News Letters</a>
+              </div>
+          </li>
+          <a class="nav-item nav-link" href="#">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="nlSignUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" >Newsletter Sign-Up Form</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link " href="index.html">Home </a>
-            <a class="nav-item nav-link active" href="#">About<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="events.html">Events</a>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    News Letter
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Sign-Up</a>
-                    <a class="dropdown-item" href="#">This Month's News</a>
-                </div>
-            </li>
-            <a class="nav-item nav-link" href="#">Contact Us</a>
+      </div>
+      <div class="modal-body">
+        <!-- NewsLetter sign-up form -->
+        <form>
+          <div class="form-group">
+            <label for="nlEmail">Email:</label>
+            <input type="text" class="form-control" id="nlEmail" placeholder="example@gmail.com">
+          </div>
+          <div class="form-group">
+            <label for="nlName">Full Name</label>
+            <input type="text" class="form-control" id="nlName" placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="nlZipcode">Zip Code</label>
+            <input type="text" class="form-control" id="nlZipcode" placeholder="90805">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col">
+            <p class="text-danger" id="nlErrorText" style="display: none;">Please enter a valid email.</p>
           </div>
         </div>
-      </nav>
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary" id="nlSignUpBtn">Sign Up</button>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Second Modal -->
+<div class="modal fade" id="nlThankYouModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <!-- NewsLetter sign-up form -->
+      
+          <h2 class="modal-title" id="nlThankYou"> Thank you</h2>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 
@@ -126,6 +195,8 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="js/starter.js"></script>
     
 </body>
 </html>

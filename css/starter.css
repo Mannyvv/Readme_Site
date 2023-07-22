@@ -20,6 +20,11 @@
     padding-bottom: 0;
 }
 
+.modal-title{
+    font-family: caveat,cursive;
+    text-align: center;
+    
+}
 .container h1{
     font-family: caveat, cursive;
     font-size-adjust: inherit;
