@@ -1,6 +1,8 @@
 
 
 $(document).ready(function () {
+  
+  // Navbar color change
   let $window = $(window);
 
   $window.on("scroll", function () {
@@ -39,7 +41,7 @@ $(document).ready(function () {
   $("#newsMonth").text(`${month[monthNumber]} News Letter`);
 
 
-  // Sign-Up Form
+  // Sign-Up Form and Thank you
   let signUpBtn = document.querySelector("#nlSignUpBtn");
   signUpBtn.addEventListener("click", function () {
     let nlName = document.querySelector("#nlName");
@@ -54,10 +56,26 @@ $(document).ready(function () {
   } else{
     $("#nlErrorText").show()
   }
+  });
 
-
-  })
-
+  // Readmore Button
+  let readmore = document.getElementById('readMoreBtn')
+  readmore.addEventListener("click",
+    function () {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("readMoreBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    });
 
 });
 
