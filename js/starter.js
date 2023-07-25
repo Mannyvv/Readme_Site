@@ -7,7 +7,7 @@ $(document).ready(function () {
 
   $window.on("scroll", function () {
     let pixels = $window.scrollTop();
-    console.log(`This is the pixel distance: ${pixels}`);
+    // console.log(`This is the pixel distance: ${pixels}`);
     let navBarEl = $("#navbar");
 
     if (pixels > 130) {
@@ -46,7 +46,7 @@ $(document).ready(function () {
   signUpBtn.addEventListener("click", function () {
     let nlName = document.querySelector("#nlName");
     if (nlEmail.value){
-      let fullName = nlName.value;
+      let fullName = nlName.val;
       let nlThankYou = document.querySelector("#nlThankYou");
       nlThankYou.textContent = `Thank you ${fullName}!`;
       $("#nlSignUpModal").modal('hide')
@@ -59,23 +59,27 @@ $(document).ready(function () {
   });
 
   // Readmore Button
-  let readmore = document.getElementById('readMoreBtn')
-  readmore.addEventListener("click",
-    function () {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("readMoreBtn");
+ 
+
+
+  // let readmore = document.getElementById('readMoreBtn')
+  // if (readmore){
+  // readmore.addEventListener("click",
+  //   function () {
+  //     var dots = document.getElementById("dots");
+  //     var moreText = document.getElementById("more");
+  //     var btnText = document.getElementById("readMoreBtn");
     
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    });
+  //     if (dots.style.display === "none") {
+  //       dots.style.display = "inline";
+  //       btnText.innerHTML = "Read more";
+  //       moreText.style.display = "none";
+  //     } else {
+  //       dots.style.display = "none";
+  //       btnText.innerHTML = "Read less";
+  //       moreText.style.display = "inline";
+  //     }
+  //   });}
 
 });
 
