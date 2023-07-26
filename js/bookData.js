@@ -18,10 +18,7 @@ $(document).ready(function () {
         const data = response.data; // Access the entire response data
         const books = data.items; // Access the 'items' array from the response
         
-        // let welcome = document.getElementById('welcomeImg')
-        // if (welcome){
-        //   welcome.remove()
-        // }
+       
 
         const container = document.getElementById('card-container');
         container.innerHTML = "";
@@ -97,8 +94,8 @@ function createCard(title,description_1,description_2,author,imageURL,languages,
   const card = document.createElement('div');
   card.classList.add('card');
   card.innerHTML = `
-  <div class="col-md-6 col-lg-4">
-  <div class="card" style="width: 15rem;">
+  <div class="col-md-6 col-lg-4" id="cardcontainer">
+  <div class="card" style="width: 15rem;" id="cardonly">
     <img class="card-img-top " src="${imageURL}" alt="No Image Found" style="max-width:100%;height:auto;">
     <div class="card-body">
       <h5 class="card-title"><a href= "https://www.google.com/search?q=${title}" style= "color:black;">${title}<a></h5>

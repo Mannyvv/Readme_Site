@@ -1,107 +1,119 @@
-.jumbotron, .site-footer{
-    margin: 0;
-    padding: 0px;
-    background-color: #05e8ba;
-    background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
-    flex-direction: column;
-
+.jumbotron,
+.site-footer {
+  margin: 0;
+  padding: 0px;
+  background-color: #05e8ba;
+  background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
+  flex-direction: column;
 }
 
-
-#logo-text{
-    margin-top: 20px;
-    margin-left: 0;
-    padding-left: 0;
+#logo-text {
+  margin-top: 20px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-#logo-text h1{
-    font-family: caveat, cursive;
-    font-size-adjust: inherit;
-    margin-bottom: 0;
-    padding-bottom: 0;
+#logo-text h1 {
+  font-family: caveat, cursive;
+  font-size-adjust: inherit;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
-.modal-title{
-    font-family: caveat,cursive;
-    text-align: center;
-    
+.modal-title {
+  font-family: caveat, cursive;
+  text-align: center;
 }
-.container h1{
-    font-family: caveat, cursive;
-    font-size-adjust: inherit;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font-size: 50px;
-    
-    
+.container h1 {
+  font-family: caveat, cursive;
+  font-size-adjust: inherit;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 50px;
 }
 
-#logo-text h2{
-    font-size-adjust: inherit;
-    margin-top: 0;
-    padding-top: 0;
-    
+#logo-text h2 {
+  font-size-adjust: inherit;
+  margin-top: 0;
+  padding-top: 0;
 }
 
-
-#logo-image{
-    height:fit-content;
-    margin-right: 0;
-    padding-right: 0;
+#logo-image {
+  height: fit-content;
+  margin-right: 0;
+  padding-right: 0;
 }
 
 .navbar-custom {
-    background-color: #05e8ba;
-    background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
-    border-bottom: 3px;
-    border-color: black;
-    border-bottom-style: solid;
-    color: black;
+  background-color: #05e8ba;
+  background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
+  border-bottom: 3px;
+  border-color: black;
+  border-bottom-style: solid;
+  color: black;
 }
 
-.row-content{
-    border-bottom: black;
-    border-bottom-style: ridge;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    border-width: 1px;
-
-
+.row-content {
+  border-bottom: black;
+  border-bottom-style: ridge;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-width: 1px;
 }
 
-iframe{
-    display: block;
-    margin: auto;
+iframe {
+  display: block;
+  margin: auto;
 }
 
-.btn-link{
-    color: white;
+.btn-link {
+  color: white;
+}
+
+.site-footer {
+  margin: 0;
+  margin-bottom: -9999px;
+  padding: 0px;
+  background-color: #05e8ba;
+  background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
+}
+
+.card {
+  margin: 5px;
+  padding: 5px;
+  margin: 10 5 10 5;
+}
+
+#more {
+  display: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
+
+#welcomeImg {
+  position: relative;
 }
 
 
-.site-footer{
-        
-        margin: 0;
-        margin-bottom: -9999px;
-        padding: 0px;
-        background-color: #05e8ba;
-        background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
+
+@keyframes example {
+  from {
+    box-shadow: 0px 0px white;
+  }
+  to {
+    box-shadow: 5px 10px gray;
+  }
 }
 
-.card{
-    margin: 5px;
-    padding: 5px;
-    margin: 10 5 10 5;
-}
-
-#more {display: none;
-}
-
-body{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-footer{
-    margin-top: auto;
+#cardcontainer .card:hover {
+  animation-name: example;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
