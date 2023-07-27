@@ -6,7 +6,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/starter.css">
+    <link rel="stylesheet" href="css/site.css">
 
     <!-- Additional CSS -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
@@ -19,7 +19,8 @@
     <title>ReadMe</title>
 </head>
 <body>
-    
+
+    <!-- Jumbotron Header -->
     <header class="jumbotron jumbotron-fluid">
         <div class="container ml-0" >
             <div class="row" >
@@ -34,6 +35,7 @@
             </div>
         </div>
     </header>
+
     <!-- Navigation Bar -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,12 +63,8 @@
       </div>
     </nav>
 
-    <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button> -->
 
-<!-- Modal -->
+<!-- Sign-Up Form Modal -->
 <div class="modal fade" id="nlSignUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -111,20 +109,17 @@
   </div>
 </div>
 
-<!-- Second Modal -->
-<div class="modal fade" id="nlThankYouModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      
-      <div class="modal-body">
-        <!-- NewsLetter sign-up form -->
-      
-          <h2 class="modal-title" id="nlThankYou"> Thank you</h2>
-        
+  <!-- Sign-up Thank you Modal -->
+  <div class="modal fade" id="nlThankYouModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+            <h2 class="modal-title" id="nlThankYou"> Thank you</h2>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
 
 
 
@@ -134,17 +129,18 @@
         <div class="col-sm-12">
           <h1 style="margin-left: 150px;">Events</h1>
         </div>
+        <!-- Google Calendar -->
         <div class="col-sm-12">
           <iframe  src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%237986CB&ctz=America%2FLos_Angeles&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&src=NjZmMDk0MGNiYjlhYWE3ZjhkN2RlNWFiN2YyODMxNjhhNmZiZDExOTYzYWRiODkxMzA5MDQ0NWRiMGEyNGJhYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
         </div>
       </div>
-
     </div>
-    <footer class="site-footer">
+
+    <!-- Page Footer -->
+    <footer class="site-footer fixed-bottom">
       <div class="container">
           <div class="row">
               <div class="col-4 col-sm-2 offset-1">
-                  <!-- <h5>Links</h5> -->
                   <ul class="list-unstyled">
                       <li><a class="text-white" href="index.html">Home</a></li>
                       <li><a class="text-white" href="aboutus.html">About</a></li>

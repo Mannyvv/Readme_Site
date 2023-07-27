@@ -42,12 +42,13 @@ $(document).ready(function () {
 
 
   // Sign-Up Form and Thank you
-  let signUpBtn = document.querySelector("#nlSignUpBtn");
+  let signUpBtn = document.getElementById("nlSignUpBtn");
   signUpBtn.addEventListener("click", function () {
-    let nlName = document.querySelector("#nlName");
+    let nlName = document.getElementById("nlName");
     if (nlEmail.value){
-      let fullName = nlName.val;
-      let nlThankYou = document.querySelector("#nlThankYou");
+      let fullName = nlName.value;
+      console.log(fullName)
+      let nlThankYou = document.getElementById("nlThankYou");
       nlThankYou.textContent = `Thank you ${fullName}!`;
       $("#nlSignUpModal").modal('hide')
       $("#nlErrorText").hide()

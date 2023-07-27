@@ -7,6 +7,8 @@
   flex-direction: column;
 }
 
+
+
 #logo-text {
   margin-top: 20px;
   margin-left: 0;
@@ -70,18 +72,19 @@ iframe {
   color: white;
 }
 
-.site-footer {
-  margin: 0;
-  margin-bottom: -9999px;
-  padding: 0px;
-  background-color: #05e8ba;
-  background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
+.site-footer{
+background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
 }
 
 .card {
   margin: 5px;
   padding: 5px;
   margin: 10 5 10 5;
+  cursor: pointer;
 }
 
 #more {
@@ -93,13 +96,9 @@ body {
   display: flex;
   flex-direction: column;
 }
-footer {
-  margin-top: auto;
-}
 
-#welcomeImg {
-  position: relative;
-}
+
+
 
 
 
@@ -114,6 +113,6 @@ footer {
 
 #cardcontainer .card:hover {
   animation-name: example;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }

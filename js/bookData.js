@@ -27,24 +27,24 @@ $(document).ready(function () {
           // Loop through the array to access individual book data
           books.forEach((book) => {
             const bookInfo = book.volumeInfo; // Access the book information from 'volumeInfo'
+            console.log(book.volumeInfo)
             let title = bookInfo.title
+
             if (bookInfo.title.length > 60){
               title = `${bookInfo.title.slice(0,60)}...`;
             }
+
             const authors = bookInfo.authors;
-            var averageRating = "N/A";
-            if(bookInfo.averageRating){
-            var averageRating = `${bookInfo.averageRating}<i class="fa fa-star"></i>`
-            }
+            const averageRating = bookInfo.averageRating ? `${bookInfo.averageRating}<i class="fa fa-star"></i>` : "N/A";
 
             if(bookInfo.language === "en"){
               var languages = "English"
             }
+
             const description_1 = bookInfo.description.slice(0,100);
             const description_2 = bookInfo.description.slice(101,200);
             const pageCount = bookInfo.pageCount;
-            const thumbnailUrl = bookInfo.imageLinks ? bookInfo.imageLinks.thumbnail : "/img/noImg.jpg";
-            // Add more properties as needed based on your use case
+            const thumbnailUrl = bookInfo.imageLinks ? bookInfo.imageLinks.smallThumbnail : "/img/noImg.jpg";
             createCard(title,description_1,description_2,authors,thumbnailUrl,languages,averageRating) ;
 
 
@@ -72,7 +72,6 @@ $(document).ready(function () {
       Array.from(readMoreBtns).forEach( btn1 => {
       btn1.addEventListener('click', btn => {
         console.log(btn1.parentElement.childNodes)
-
 
             })});
           }
