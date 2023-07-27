@@ -1,20 +1,30 @@
 $(document).ready(function () {
+
+  // Search Book Title
   let searchBtn = document.getElementById("searchButton");
   let searchTermEl = document.getElementById("searchInput");
-  searchBtn.addEventListener("click", fetchData);
-  searchTermEl.addEventListener("keydown", function(key){
+  
+  // Event Listeners for search => enter key or mouse click
+  searchBtn.addEventListener("click", () =>{
+    let searchTerm = searchTermEl.value;
+    fetchData(searchTerm);
+  });
+
+
+  searchTermEl.addEventListener("keydown", (key) =>{
     if (key.code === "Enter"){
-      fetchData();
+      let searchTerm = searchTermEl.value;
+      fetchData(searchTerm);
     }});
 
-  function fetchData() {
-    let searchTerm = searchTermEl.value;
-    console.log(searchTerm);
+  // Fetch data from Google Books API
+  function fetchData(query) {
+    console.log(query);
 
     axios
-      .get(`http://localhost:3001/search?q=${searchTerm}`)
+      .get(`http://localhost:3001/search?q=${query}`)
       .then((response) => {
-        searchTermEl.value = ""
+        searchTermEl.value = "";
         const data = response.data; // Access the entire response data
         const books = data.items; // Access the 'items' array from the response
         
@@ -27,34 +37,24 @@ $(document).ready(function () {
           // Loop through the array to access individual book data
           books.forEach((book) => {
             const bookInfo = book.volumeInfo; // Access the book information from 'volumeInfo'
-            console.log(book.volumeInfo)
-            let title = bookInfo.title
-
+             // Shorten Book Title
+            let title = bookInfo.title;
             if (bookInfo.title.length > 60){
               title = `${bookInfo.title.slice(0,60)}...`;
             }
-
             const authors = bookInfo.authors;
+            // Check for average rating : True -> Rating and Start, False -> N/A
             const averageRating = bookInfo.averageRating ? `${bookInfo.averageRating}<i class="fa fa-star"></i>` : "N/A";
-
+            // Change en to English string
             if(bookInfo.language === "en"){
               var languages = "English"
             }
-
+            // Shorten Description: Wanted to add "More" button to reveal rest of description
             const description_1 = bookInfo.description.slice(0,100);
             const description_2 = bookInfo.description.slice(101,200);
-            const pageCount = bookInfo.pageCount;
+            // Check for thumbnail image : True -> Using Image, False -> Use "image not available png"
             const thumbnailUrl = bookInfo.imageLinks ? bookInfo.imageLinks.smallThumbnail : "/img/noImg.jpg";
             createCard(title,description_1,description_2,authors,thumbnailUrl,languages,averageRating) ;
-
-
-
-            // console.log("Title:", title);
-            // console.log("Authors:", authors);
-            // console.log("Description:", description);
-            // console.log("Page Count:", pageCount);
-            // console.log("Image Thumbnail:", thumbnailUrl)
-            // console.log("----------------------------------------------");
           });
         } else {
           console.log("No books found for the given search term.");
@@ -63,33 +63,12 @@ $(document).ready(function () {
       .catch((error) => {
         console.error("API call error:", error);
       });
-      // code from starter
-      document.addEventListener('click', test)
-      
-      function test(){
-      let readMoreBtns = document.getElementsByClassName('moreBtnClass')
-      // Convert HTML collection to array
-      Array.from(readMoreBtns).forEach( btn1 => {
-      btn1.addEventListener('click', btn => {
-        console.log(btn1.parentElement.childNodes)
 
-            })});
-          }
-        // code from starter
+     
   }
 
-  // Card creation
-let cardCount = 0;
-
-function addCard() {
-  cardCount++;
-  const cardContainer = document.getElementById('card-container');
-  const card = createCard(cardCount);
-  cardContainer.appendChild(card);
-}
-
-function createCard(title,description_1,description_2,author,imageURL,languages,averageRating) {
-  
+// Function to dynamically create cards for each book in api response
+function createCard(booktitle,description_1,description_2,author,imageURL,languages,averageRating) {
   const card = document.createElement('div');
   card.classList.add('card');
   card.innerHTML = `
@@ -97,7 +76,7 @@ function createCard(title,description_1,description_2,author,imageURL,languages,
   <div class="card" style="width: 15rem;" id="cardonly">
     <img class="card-img-top " src="${imageURL}" alt="No Image Found" style="max-width:100%;height:auto;">
     <div class="card-body">
-      <h5 class="card-title"><a href= "https://www.google.com/search?q=${title}" style= "color:black;">${title}<a></h5>
+      <h5 class="card-title"><a href= "https://www.google.com/search?q=${booktitle}" style= "color:black;">${booktitle}<a></h5>
       <p class="card-subtitle"><b>Average Rating:</b> ${averageRating} </p>
       <p class="card-subtitle"><b>By: </b><a class="text-info" href="https://www.google.com/search?q=${author}">${author}</a></p>
       <p class="card-subtitle"><b>Languages: </b>${languages}</p>
@@ -114,7 +93,6 @@ function createCard(title,description_1,description_2,author,imageURL,languages,
 </div>
   `;
   const cardContainer = document.getElementById('card-container');
-  
   cardContainer.appendChild(card);
 }
 

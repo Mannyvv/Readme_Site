@@ -20,6 +20,7 @@ $(document).ready(function () {
         .addClass("navbar-light bg-light");
     }
   });
+  // 
 
   // Obtains month for the newsletter dropdown option
   let dateData = new Date();
@@ -39,6 +40,7 @@ $(document).ready(function () {
     "December",
   ];
   $("#newsMonth").text(`${month[monthNumber]} News Letter`);
+  // 
 
 
   // Sign-Up Form and Thank you
@@ -61,8 +63,6 @@ $(document).ready(function () {
 
   // Readmore Button
  
-
-
   // let readmore = document.getElementById('readMoreBtn')
   // if (readmore){
   // readmore.addEventListener("click",
